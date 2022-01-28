@@ -1,12 +1,24 @@
 package com.bennychan.roomwebapp.models;
 
+import javax.persistence.*;
+import java.util.UUID;
+
+@Entity
+@Table(name = "EMPLOYEE")
 public class Staff {
+    @Id
+    @Column(name = "EMPLOYEE_ID")
     private String employeeId;
+    @Column(name = "FIRST_NAME")
     private String firstName;
+    @Column(name = "LAST_NAME")
     private String lastName;
+    @Column(name = "POSITION")
+    @Enumerated(EnumType.STRING)
     private Position position;
 
     public Staff() {
+        this.employeeId = UUID.randomUUID().toString();
     }
 
     public Staff(String employeeId, String firstName, String lastName, Position position) {

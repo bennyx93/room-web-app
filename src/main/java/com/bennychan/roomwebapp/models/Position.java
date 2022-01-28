@@ -1,7 +1,7 @@
 package com.bennychan.roomwebapp.models;
 
 public enum Position {
-    CONCIERGE, MANAGER, WAITER;
+    CONCIERGE, MANAGER, WAITER, SECURITY, HOUSEKEEPING, FRONT_DESK;
 
     public String toString() {
         switch (this) {
@@ -11,6 +11,12 @@ public enum Position {
                 return "Manager";
             case WAITER:
                 return "Waiter";
+            case HOUSEKEEPING:
+                return "Housekeeping";
+            case SECURITY:
+                return "Security";
+            case FRONT_DESK:
+                return "Front Desk";
         }
         return "";
     }
